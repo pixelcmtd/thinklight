@@ -1,0 +1,3 @@
+#!/bin/sh
+sudo gcc -O3 thinklight.c -o thinklight
+sudo chmod +s thinklight
