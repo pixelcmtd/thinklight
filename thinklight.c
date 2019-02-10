@@ -1,5 +1,4 @@
-#define PATH \
-	"/sys/devices/platform/thinkpad_acpi/leds/tpacpi::thinklight/brightness"
+#include "config.h"
 #include <sys/types.h>
 #include <stdio.h>
 #include <stdlib.h>
