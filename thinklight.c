@@ -34,7 +34,7 @@ void tl_help() {
 	puts("Usage: thinklight [command]");
 	puts("(thinklight is equal to thinklight t)");
 	printf("\nt[oggle] - turns on the light if it's off and ");
-	puts("turn it off if it's on");
+	puts("turns it off if it's on");
 	puts("on - turn on the light");
 	puts("of[f] - turn off the light");
 }
