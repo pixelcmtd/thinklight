@@ -1,7 +1,0 @@
-#!/bin/sh
-sudo gcc -O3 -DTL_TL thinklight.c -o thinklight
-sudo chmod +s thinklight
-sudo gcc -O3 -DTL_CL thinklight.c -o capslock
-sudo chmod +s capslock
-sudo gcc -O3 -DTL_SB thinklight.c -o standby
-sudo chmod +s standby

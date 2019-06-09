@@ -1,7 +1,0 @@
-#!/bin/sh
-sudo cp thinklight /usr/bin/
-sudo chmod +s /usr/bin/thinklight
-sudo cp capslock /usr/bin/
-sudo chmod +s /usr/bin/capslock
-sudo cp standby /usr/bin/
-sudo chmod +s /usr/bin/standby
