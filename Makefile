@@ -1,23 +1,15 @@
-all:
-	@sudo gcc -O3 -DTL_TL thinklight.c -o thinklight
-	@sudo chmod +s thinklight
-	@sudo gcc -O3 -DTL_CL thinklight.c -o capslock
-	@sudo chmod +s capslock
-	@sudo gcc -O3 -DTL_SB thinklight.c -o standby
-	@sudo chmod +s standby
-	@sudo gcc -O3 -DTL_PW thinklight.c -o power
-	@sudo chmod +s power
-	@sudo gcc -O3 -DTL_WL thinklight.c -o wifi
-	@sudo chmod +s wifi
+CC ?= cc
+PREFIX ?= /usr/local
+
+all: thinklight capslock standby power wifi
+
+%: %.c
+	$(CC) -Wall -Wextra -O3 $< -o $@
+	chmod +s $@
 
 install:
-	@sudo cp thinklight /usr/bin/
-	@sudo chmod +s /usr/bin/thinklight
-	@sudo cp capslock /usr/bin/
-	@sudo chmod +s /usr/bin/capslock
-	@sudo cp standby /usr/bin/
-	@sudo chmod +s /usr/bin/standby
-	@sudo cp power /usr/bin/power
-	@sudo chmod +s /usr/bin/power
-	@sudo cp wifi /usr/bin/wifi
-	@sudo chmod +s /usr/bin/wifi
+	cp thinklight capslock standby power wifi /usr/local/bin/
+	chmod +s $(PREFIX)/bin/thinklight $(PREFIX)/bin/capslock \
+		$(PREFIX)/bin/standby $(PREFIX)/bin/power $(PREFIX)/bin/wifi
+
+.PHONY: all install
